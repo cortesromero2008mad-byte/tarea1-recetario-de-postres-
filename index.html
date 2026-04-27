@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Recetas de Postres</title>
+    <style>
+        body {
+            background-color: #fff9c4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 { 
+            color: #d81b60; 
+            animation: latidoTitulo 3s ease-in-out infinite;
+        }
+
+        @keyframes entradaElegante {
+            0% { opacity: 0; transform: translateY(50px) scale(0.9); filter: blur(10px); }
+            70% { transform: translateY(-10px) scale(1.02); }
+            100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        }
+
+        @keyframes latidoTitulo {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .contenedor-recetas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .recetarios {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 5px solid #f06292;
+            animation: entradaElegante 0.8s ease-out backwards;
+        }
+
+        .contenido {
+            width: 100%;
+            height: 100%;
+            transition: all 0.6s ease;
+            filter: brightness(0.5) grayscale(100%);
+        }
+
+        .tapa {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fce4ec;
+            background-image: url(https://coin-images.coingecko.com/coins/images/53148/large/IMG_8373.JPG?1735662644); 
+            background-size: cover;
+            background-position: center;
+            z-index: 5;
+            transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #880e4f;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .recetarios:hover .tapa {
+            transform: translateY(-100%);
+        }
+
+        .recetarios:hover .contenido {
+            filter: brightness(1.1) grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .recetarios:active {
+            transform: scale(0.95);
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Menú de Repostería</h1>
+        <p>Pasa el mouse sobre las bandejas para descubrir las recetas</p>
+    </header>
+
+    <main class="contenedor-recetas">
+        
+        <article class="recetarios">
+            <div class="tapa"></div>
+            <div class="contenido">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=7248049396333272" scrolling="no"></iframe>
+            </div>
+        </article>
+
+        <article class="recetarios">
+            <div class="tapa"></div>
+            <div class="contenido">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=29484572558190439" scrolling="no"></iframe>
+            </div>
+        </article>
+
+        <article class="recetarios">
+            <div class="tapa"></div>
+            <div class="contenido">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=10766486606823302" scrolling="no"></iframe>
+            </div>
+        </article>
+
+        <article class="recetarios">
+            <div class="tapa"></div>
+            <div class="contenido">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=900438519264626413" scrolling="no"></iframe>
+            </div>
+        </article>
+
+        <article class="recetarios">
+            <div class="tapa"></div>
+            <div class="contenido">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=8725793022496444" scrolling="no"></iframe>
+            </div>
+        </article>
+
+        <article class="recetarios">
+            <div class="tapa"></div>
+            <div class="contenido">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=6333255724955568" scrolling="no"></iframe>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+</html>
